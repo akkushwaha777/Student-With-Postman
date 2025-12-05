@@ -1,0 +1,402 @@
+{
+	"info": {
+		"_postman_id": "50468968-db3fb5aa-4e46-4a9d-b142-832eb44f955f",
+		"name": "My Collection",
+		"description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"id": "50468968-b1333188-7137-4c4a-a19d-a5ffb308099f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Avinsh Kumar\",\r\n    \"mobile\": 9016841444,\r\n    \"email\": \"avinsh@gmail.com\",\r\n    \"password\": \"Avinsh4500\",\r\n    \"address\": \"Kalol Gandhinagar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"id": "50468968-73948ab1-64d0-441a-832a-30a70d163f3f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"avinsh@gmail.com\",\r\n    \"password\": \"Avinsh4500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "protected",
+			"id": "50468968-c3102495-8777-44c8-819a-c290b1e5be0b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJkZmI0NmZjZGE5NWVjNDVmNTQzOSIsImlhdCI6MTc2NDk0MTg0MiwiZXhwIjoxNzY0OTQ1NDQyfQ.Y04GmsAFkRW84oHfcCV978YqBiPeRU3k19VFSL2dh4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Avinsh Kumar\",\r\n    \"mobile\": 9016841444,\r\n    \"email\": \"avinsh@gmail.com\",\r\n    \"password\": \"Avinsh4500\",\r\n    \"address\": \"Kalol Gandhinagar\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/User/protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"User",
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Get",
+			"id": "50468968-be7c6b20-e069-4ea0-a33e-24a1eb554dc4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJkZmI0NmZjZGE5NWVjNDVmNTQzOSIsImlhdCI6MTc2NDk0MTg0MiwiZXhwIjoxNzY0OTQ1NDQyfQ.Y04GmsAFkRW84oHfcCV978YqBiPeRU3k19VFSL2dh4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Update With Id",
+			"id": "50468968-d06ea430-af76-4b3e-a0b5-2246a95938a0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJkZmI0NmZjZGE5NWVjNDVmNTQzOSIsImlhdCI6MTc2NDk0MTg0MiwiZXhwIjoxNzY0OTQ1NDQyfQ.Y04GmsAFkRW84oHfcCV978YqBiPeRU3k19VFSL2dh4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Avinsh Kumar\",\r\n  \"phone\": \"90168415555\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/user/6932dfb46fcda95ec45f5439",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"6932dfb46fcda95ec45f5439"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Delete Using Id",
+			"id": "50468968-921ad8e2-5520-44b9-b47d-9e9d919a7060",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJkZmI0NmZjZGE5NWVjNDVmNTQzOSIsImlhdCI6MTc2NDk0MTg0MiwiZXhwIjoxNzY0OTQ1NDQyfQ.Y04GmsAFkRW84oHfcCV978YqBiPeRU3k19VFSL2dh4w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/user/6932dfb46fcda95ec45f5439",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"user",
+						"6932dfb46fcda95ec45f5439"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resources Add",
+			"id": "50468968-f82298e7-8ccf-435f-a91e-f1327988ec98",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJlNzk4NmZjZGE5NWVjNDVmNTQ0OCIsImlhdCI6MTc2NDk0Mzc3NCwiZXhwIjoxNzY0OTQ3Mzc0fQ.UkM0QD3nxyplCa483gdeyg2lUPvMb6mgltmpqJQQHKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first resource\",\r\n  \"description\": \"Sample description\",\r\n  \"category\": \"general\",\r\n  \"status\": \"active\",\r\n  \"amount\": 1200\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/resources",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"resources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resources Get With ID",
+			"id": "50468968-87c45491-eb0c-41b2-9d8f-4a3c60c41798",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJlNzk4NmZjZGE5NWVjNDVmNTQ0OCIsImlhdCI6MTc2NDk0Mzc3NCwiZXhwIjoxNzY0OTQ3Mzc0fQ.UkM0QD3nxyplCa483gdeyg2lUPvMb6mgltmpqJQQHKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"My first resource\",\r\n  \"description\": \"Sample description\",\r\n  \"category\": \"general\",\r\n  \"status\": \"active\",\r\n  \"amount\": 1200\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/resources/6932e8e16fcda95ec45f544b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"resources",
+						"6932e8e16fcda95ec45f544b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resources Update",
+			"id": "50468968-d0d9c6ae-486f-41d4-86f3-9ebf24a29a95",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"completed\",\r\n  \"amount\": 1500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/resources/6932e8e16fcda95ec45f544b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"resources",
+						"6932e8e16fcda95ec45f544b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resources Get All",
+			"id": "50468968-40b90989-0b80-42b0-a451-992155698f32",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Resources Delete",
+			"id": "50468968-d0b88ad3-0a2d-47aa-a812-d9082306dbc4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5MzJlNzk4NmZjZGE5NWVjNDVmNTQ0OCIsImlhdCI6MTc2NDk0Mzc3NCwiZXhwIjoxNzY0OTQ3Mzc0fQ.UkM0QD3nxyplCa483gdeyg2lUPvMb6mgltmpqJQQHKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"status\": \"completed\",\r\n  \"amount\": 1500\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/resources/6932e8e16fcda95ec45f544b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"resources",
+						"6932e8e16fcda95ec45f544b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
