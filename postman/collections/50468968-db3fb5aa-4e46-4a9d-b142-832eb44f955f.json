@@ -332,7 +332,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/resources/6932e8e16fcda95ec45f544b",
+					"raw": "http://localhost:5000/api/resources/6933f9b024e4b50a14151a18",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -341,7 +341,7 @@
 					"path": [
 						"api",
 						"resources",
-						"6932e8e16fcda95ec45f544b"
+						"6933f9b024e4b50a14151a18"
 					]
 				}
 			},
